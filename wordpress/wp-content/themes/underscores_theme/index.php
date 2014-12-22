@@ -31,10 +31,11 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
+			<?php /* For previous/next pages */ ?>
 			<?php underscores_theme_paging_nav(); ?>
 
 		<?php else : ?>
-
+			<?php /* If no posts exists */ ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 
 		<?php endif; ?>
