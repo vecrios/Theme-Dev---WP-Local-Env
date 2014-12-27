@@ -784,3 +784,106 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+
+
+
+
+
+/* ------------------------------------------ */
+/* TURKI: */
+
+
+header#masthead.site-header, div#content.site-content, footer#colophon.site-footer {
+	border: 3px solid red;
+}
+
+
+
+#primary, #masthead > *, footer .site-info {
+	border: 3px solid blue;
+	margin-left: 25%;
+	margin-right: 25%;
+	width: 50%;
+}
+
+
+/* Handles spacing between links of pages  */
+nav#site-navigation li {
+	margin-left: 10px;
+	float: none;
+}
+
+
+#masthead .site-branding {
+	margin-top: 50px;
+
+	margin-left: 0%;
+	margin-right: 60%;
+
+
+	height: 80px;
+	width: auto;
+
+
+	border-color: black;
+	border-left: 0px;
+
+	border-bottom-right-radius: 50px;
+	border-top-right-radius: 50px;
+
+	overflow: hidden;
+
+	background-color: gray;
+	color: white;
+}
+
+
+#masthead .site-branding * {
+	display: inline-block;
+	float: right;
+	clear: none;
+}
+
+#masthead .site-branding h2 {
+	/* Vertical Center caption */
+	text-align: center;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    margin-right: 10px;
+
+}
+
+#masthead .site-branding img {
+	max-height: 100%;
+
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+	overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
