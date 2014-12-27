@@ -159,7 +159,8 @@ h3,
 h4,
 h5,
 h6 {
-	clear: both;
+	/* NOT NEEDED? */
+	/*clear: both;*/
 }
 
 p {
@@ -424,10 +425,16 @@ a:active {
 --------------------------------------------------------------*/
 .main-navigation {
 	clear: both;
-	display: block;
+	display: inline-block;
 	float: left;
-	width: 100%;
+	width: 25%;
 }
+
+.main-navigation .menu {
+	float: right;
+
+}
+
 
 .main-navigation ul {
 	list-style: none;
@@ -436,8 +443,14 @@ a:active {
 }
 
 .main-navigation li {
-	float: left;
 	position: relative;
+
+	float: none;
+
+	height: 64px;
+	width: 80px;
+	text-align: center;
+	border: 3px solid orange;
 }
 
 .main-navigation a {
@@ -795,7 +808,7 @@ object {
 
 
 header#masthead.site-header, div#content.site-content, footer#colophon.site-footer {
-	border: 3px solid red;
+	/*border: 3px solid red;*/
 }
 
 
@@ -804,14 +817,8 @@ header#masthead.site-header, div#content.site-content, footer#colophon.site-foot
 	border: 3px solid blue;
 	margin-left: 25%;
 	margin-right: 25%;
+	/* FIX THIS; should be auto */
 	width: 50%;
-}
-
-
-/* Handles spacing between links of pages  */
-nav#site-navigation li {
-	margin-left: 10px;
-	float: none;
 }
 
 
@@ -819,18 +826,15 @@ nav#site-navigation li {
 	margin-top: 50px;
 
 	margin-left: 0%;
-	margin-right: 60%;
+	margin-right: 55%;
 
 
-	height: 80px;
+	height: 70px;
 	width: auto;
 
 
 	border-color: black;
 	border-left: 0px;
-
-	border-bottom-right-radius: 50px;
-	border-top-right-radius: 50px;
 
 	overflow: hidden;
 
@@ -854,15 +858,11 @@ nav#site-navigation li {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 
-    margin-right: 10px;
-
+    width: 44%;
 }
 
 #masthead .site-branding img {
 	max-height: 100%;
-
-	border-top-left-radius: 50px;
-	border-bottom-left-radius: 50px;
 	overflow: hidden;
 }
 
