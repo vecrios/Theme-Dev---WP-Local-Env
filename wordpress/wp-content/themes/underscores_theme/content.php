@@ -10,7 +10,10 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php underscores_theme_posted_on(); ?>
+			<?php 
+				// Uncomment to show date of post
+				// underscores_theme_posted_on();  
+			?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->

@@ -147,7 +147,7 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5;
@@ -411,7 +411,7 @@ a {
 }
 
 a:visited {
-	color: purple;
+	color: royalblue;
 }
 
 a:hover,
@@ -450,7 +450,9 @@ a:active {
 	height: 64px;
 	width: 80px;
 	text-align: center;
-	border: 3px solid orange;
+	/*border: 3px solid orange; */
+
+	padding: 5px;
 }
 
 .main-navigation a {
@@ -590,7 +592,7 @@ a:active {
 }
 
 .aligncenter {
-	clear: both;
+	/*clear: both;*/
 	display: block;
 	margin: 0 auto;
 }
@@ -651,7 +653,7 @@ a:active {
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+	margin: 0 0 4em;
 }
 
 .byline,
@@ -667,7 +669,7 @@ a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 1em 0 0;
 }
 
 .page-links {
@@ -814,29 +816,27 @@ header#masthead.site-header, div#content.site-content, footer#colophon.site-foot
 
 
 #primary, #masthead > *, footer .site-info {
-	border: 3px solid blue;
-	margin-left: 25%;
-	margin-right: 25%;
+	/*border: 3px solid blue;*/
+	margin-left: auto;
+	margin-right: auto;
 	/* FIX THIS; should be auto */
 	width: 50%;
 }
 
 
 #masthead .site-branding {
-	margin-top: 50px;
-
 	margin-left: 0%;
 	margin-right: 55%;
 
 
-	height: 70px;
+	height: 30px;
 	width: auto;
 
 
 	border-color: black;
 	border-left: 0px;
 
-	overflow: hidden;
+	/*overflow: hidden;*/
 
 	background-color: gray;
 	color: white;
@@ -862,26 +862,85 @@ header#masthead.site-header, div#content.site-content, footer#colophon.site-foot
 }
 
 #masthead .site-branding img {
-	max-height: 100%;
+	max-height: 74px;
 	overflow: hidden;
+	/*border: 3px solid orange;*/
+}
+
+#masthead::after {
+	clear: none;
+}
+
+#masthead {
+	margin-top: 50px;
+
+}
+
+#site-navigation > div > ul > li > a {
+	width:100%;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: red;
+}
+
+.entry-title {
+	font-size: 17pt;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+
+.entry-meta { 
+	font-size: 7pt;
+	color: gray;
+	/*margin-left: 3%;*/
+}
+
+
+article header { 
+	padding-left: 3%;
+	padding-right: 3%;
+}
+
+.entry-title, .entry-meta, .site-description {
+	font-family: 'Loto', "Lucida Sans Unicode", inherit;	
+}
+
+article.post > header.entry-header > * {
+	/*display: inline-block;*/
+	text-align: center;;
 }
 
 
 
+p {
+	font-size: 11pt;
+}
 
 
+#main {
+	padding-left: 4%;
+	padding-right: 4%;
+}
 
 
+footer {
+	margin-bottom: 50px;
+}
 
 
-
-
-
-
-
-
-
-
+.copyright {
+	display: inline-block;
+	font-size: 7pt;
+	color: gray;
+	padding: 2%;
+	text-align: right;
+	width: 100%;
+}
 
 
 

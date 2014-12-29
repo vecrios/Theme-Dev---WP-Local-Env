@@ -79,7 +79,7 @@ function underscores_theme_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', 'underscores_theme' ),
+		_x( '%s', 'post date', 'underscores_theme' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
