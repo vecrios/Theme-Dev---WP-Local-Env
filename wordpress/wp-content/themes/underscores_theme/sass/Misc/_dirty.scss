@@ -1,16 +1,8 @@
-
-
-
-
 /* ------------------------------------------ */
 /* TURKI: */
-
-
 header#masthead.site-header, div#content.site-content, footer#colophon.site-footer {
 	/*border: 3px solid red;*/
 }
-
-
 
 #primary, #masthead > *, footer .site-info {
 	/*border: 3px solid blue;*/
@@ -20,133 +12,45 @@ header#masthead.site-header, div#content.site-content, footer#colophon.site-foot
 	width: 50%;
 }
 
-
-#masthead .site-branding {
-	margin-left: 0%;
-	margin-right: 55%;
-
-
-	height: 30px;
-	width: auto;
-
-
-	border: 1px solid black; 
-	border-left: 0px;
-
-
-	background-color: gray;
-	color: white;
-}
-
-
-#masthead .site-branding * {
-	display: inline-block;
-	float: right;
-	clear: none;
-}
-
-#masthead .site-branding h2 {
-	/* Vertical Center caption */
-	text-align: center;
-    position: relative;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-
-    width: 44%;
-}
-
-#masthead .site-branding img {
-	max-height: 74px;
-	overflow: hidden;
-	border: 3px solid orange;
-}
-
-#masthead::after {
-	clear: none;
-}
-
-#masthead {
-	margin-top: 50px;
-
-}
-
-
 .entry-title {
 	font-size: 17pt;
 }
 
-
 a {
 	text-decoration: none;
 }
-
 
 .entry-meta { 
 	font-size: 7pt;
 	color: gray;
 }
 
-
 article header { 
 	padding-left: 3%;
 	padding-right: 3%;
-}
-
-.entry-title, .entry-meta, .site-description {
-	font-family: 'Loto', "Lucida Sans Unicode", inherit;	
 }
 
 article.post > header.entry-header > * {
 	text-align: center;
 }
 
-
-
 p {
 	font-size: 11pt;
 }
 
 
-#main {
-	padding-left: 4%;
-	padding-right: 4%;
-}
-
-
-footer {
-	margin-bottom: 50px;
-}
-
-
-.copyright {
-	display: inline-block;
-	font-size: 7pt;
-	color: gray;
-	padding: 2%;
-	text-align: right;
-	width: 100%;
-}
-
-
-.entry-content::after {
-	clear: none;
-}
-
-
 .background-1 {
-	background-color: #CC144F;
+	background-color: #C61459;
 }
 
 .background-2 {
-	background-color: #E64F17;
+	background-color: #E68117;
 }
 
 .background-3 {
-	background-color: #109F5E;
+	background-color: #501C9C;
 }
 
 .background-4 {
-	background-color: #6CCD15;
+	background-color: #79D015;
 }
