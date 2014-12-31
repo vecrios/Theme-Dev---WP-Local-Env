@@ -1,3 +1,8 @@
+/**
+  Flexbox mixins to manage cross-platform compatibility. 
+  Adapted from CSS-Tricks.com
+*/
+
 @mixin flexbox() {
   display: -webkit-box;
   display: -moz-box;

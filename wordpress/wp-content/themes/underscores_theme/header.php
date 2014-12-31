@@ -30,9 +30,7 @@
 		</div><!-- .site-branding -->
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<?php // include navigational menu ?>
+	<?php include 'nav.php' ?>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'underscores_theme' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->
+	<div id="content" class="site-content">

@@ -29,7 +29,6 @@ and Blueprint http://www.blueprintcss.org/
 4.0 Forms
 5.0 Navigation
 	5.1 Links
-	5.2 Menus
 6.0 Accessibility
 7.0 Alignments
 8.0 Clearings
@@ -44,6 +43,10 @@ and Blueprint http://www.blueprintcss.org/
 	12.2 Galleries
 --------------------------------------------------------------*/
 /* For responsive design */
+/**
+  Flexbox mixins to manage cross-platform compatibility. 
+  Adapted from CSS-Tricks.com
+*/
 /*--------------------------------------------------------------
 1.0 Reset
 --------------------------------------------------------------*/
@@ -419,101 +422,6 @@ a {
     color: midnightblue; }
 
 /*--------------------------------------------------------------
-5.2 Menus
---------------------------------------------------------------*/
-/* line 1, sass/navigation/_menus.scss */
-.main-navigation {
-  clear: both;
-  display: inline-block;
-  float: left;
-  width: 25%; }
-  /* line 7, sass/navigation/_menus.scss */
-  .main-navigation .menu {
-    float: right; }
-  /* line 11, sass/navigation/_menus.scss */
-  .main-navigation ul {
-    list-style: none;
-    margin: 0;
-    padding-left: 0; }
-    /* line 16, sass/navigation/_menus.scss */
-    .main-navigation ul ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 1.5em;
-      left: -999em;
-      z-index: 99999; }
-      /* line 24, sass/navigation/_menus.scss */
-      .main-navigation ul ul ul {
-        left: -999em;
-        top: 0; }
-      /* line 30, sass/navigation/_menus.scss */
-      .main-navigation ul ul li:hover > ul {
-        left: 100%; }
-      /* line 35, sass/navigation/_menus.scss */
-      .main-navigation ul ul a {
-        width: 200px; }
-    /* line 46, sass/navigation/_menus.scss */
-    .main-navigation ul li:hover > ul {
-      left: auto; }
-  /* line 50, sass/navigation/_menus.scss */
-  .main-navigation li {
-    position: relative;
-    float: none;
-    min-height: 64px;
-    width: 80px;
-    text-align: center;
-    border: 2px solid orange;
-    display: table; }
-  /* line 63, sass/navigation/_menus.scss */
-  .main-navigation a {
-    display: block;
-    text-decoration: none;
-    display: table-cell;
-    text-decoration: none;
-    vertical-align: middle;
-    width: 100%;
-    height: 100%;
-    padding: 4px;
-    color: white; }
-
-/* Small menu */
-/* line 83, sass/navigation/_menus.scss */
-.menu-toggle {
-  display: none; }
-
-@media screen and (max-width: 600px) {
-  /* line 88, sass/navigation/_menus.scss */
-  .menu-toggle,
-  .main-navigation.toggled .nav-menu {
-    display: block; }
-
-  /* line 93, sass/navigation/_menus.scss */
-  .main-navigation ul {
-    display: none; } }
-/* line 98, sass/navigation/_menus.scss */
-.site-main .comment-navigation,
-.site-main .paging-navigation,
-.site-main .post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden; }
-
-/* line 105, sass/navigation/_menus.scss */
-.comment-navigation .nav-previous,
-.paging-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%; }
-
-/* line 112, sass/navigation/_menus.scss */
-.comment-navigation .nav-next,
-.paging-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%; }
-
-/*--------------------------------------------------------------
 6.0 Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers */
@@ -699,7 +607,7 @@ a {
   #masthead.site-header::after {
     clear: none; }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 600px) {
   /* line 55, sass/site/header/_masthead.scss */
   #masthead.site-header {
     width: 100%; }
@@ -730,6 +638,101 @@ a {
     padding: 2%;
     text-align: right;
     width: 100%; }
+
+/*--------------------------------------------------------------
+10.6 Menus
+--------------------------------------------------------------*/
+/* line 1, sass/site/nav/_menus.scss */
+.main-navigation {
+  clear: both;
+  display: inline-block;
+  float: left;
+  width: 25%; }
+  /* line 7, sass/site/nav/_menus.scss */
+  .main-navigation .menu {
+    float: right; }
+  /* line 11, sass/site/nav/_menus.scss */
+  .main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0; }
+    /* line 16, sass/site/nav/_menus.scss */
+    .main-navigation ul ul {
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      float: left;
+      position: absolute;
+      top: 1.5em;
+      left: -999em;
+      z-index: 99999; }
+      /* line 24, sass/site/nav/_menus.scss */
+      .main-navigation ul ul ul {
+        left: -999em;
+        top: 0; }
+      /* line 30, sass/site/nav/_menus.scss */
+      .main-navigation ul ul li:hover > ul {
+        left: 100%; }
+      /* line 35, sass/site/nav/_menus.scss */
+      .main-navigation ul ul a {
+        width: 200px; }
+    /* line 46, sass/site/nav/_menus.scss */
+    .main-navigation ul li:hover > ul {
+      left: auto; }
+  /* line 50, sass/site/nav/_menus.scss */
+  .main-navigation li {
+    position: relative;
+    float: none;
+    min-height: 64px;
+    width: 80px;
+    text-align: center;
+    border: 2px solid orange;
+    display: table; }
+  /* line 63, sass/site/nav/_menus.scss */
+  .main-navigation a {
+    display: block;
+    text-decoration: none;
+    display: table-cell;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+    color: white; }
+
+/* Small menu */
+/* line 83, sass/site/nav/_menus.scss */
+.menu-toggle {
+  display: none; }
+
+@media screen and (max-width: 600px) {
+  /* line 88, sass/site/nav/_menus.scss */
+  .menu-toggle,
+  .main-navigation.toggled .nav-menu {
+    display: block; }
+
+  /* line 93, sass/site/nav/_menus.scss */
+  .main-navigation ul {
+    display: none; } }
+/* line 98, sass/site/nav/_menus.scss */
+.site-main .comment-navigation,
+.site-main .paging-navigation,
+.site-main .post-navigation {
+  margin: 0 0 1.5em;
+  overflow: hidden; }
+
+/* line 105, sass/site/nav/_menus.scss */
+.comment-navigation .nav-previous,
+.paging-navigation .nav-previous,
+.post-navigation .nav-previous {
+  float: left;
+  width: 50%; }
+
+/* line 112, sass/site/nav/_menus.scss */
+.comment-navigation .nav-next,
+.paging-navigation .nav-next,
+.post-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%; }
 
 /*--------------------------------------------------------------
 11.0 Infinite scroll
