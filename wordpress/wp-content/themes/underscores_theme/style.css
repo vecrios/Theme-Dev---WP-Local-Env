@@ -738,26 +738,28 @@ a {
     padding-left: 0; }
     /* line 15, sass/site/nav/_menus.scss */
     .main-navigation ul ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
       position: absolute;
       top: 1.5em;
       left: -999em;
       z-index: 99999; }
-      /* line 23, sass/site/nav/_menus.scss */
+      /* line 22, sass/site/nav/_menus.scss */
       .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
-      /* line 29, sass/site/nav/_menus.scss */
-      .main-navigation ul ul li:hover > ul {
-        left: 100%; }
-      /* line 34, sass/site/nav/_menus.scss */
+      /* line 27, sass/site/nav/_menus.scss */
+      .main-navigation ul ul li {
+        width: auto; }
+        /* line 28, sass/site/nav/_menus.scss */
+        .main-navigation ul ul li:hover > ul {
+          left: 100%; }
+      /* line 35, sass/site/nav/_menus.scss */
       .main-navigation ul ul a {
-        width: 200px; }
-    /* line 45, sass/site/nav/_menus.scss */
+        width: auto; }
+    /* line 46, sass/site/nav/_menus.scss */
     .main-navigation ul li:hover > ul {
       left: auto; }
-  /* line 49, sass/site/nav/_menus.scss */
+  /* line 50, sass/site/nav/_menus.scss */
   .main-navigation li {
     position: relative;
     float: none;
@@ -765,7 +767,7 @@ a {
     width: 80px;
     text-align: center;
     display: table; }
-  /* line 61, sass/site/nav/_menus.scss */
+  /* line 62, sass/site/nav/_menus.scss */
   .main-navigation a {
     display: block;
     text-decoration: none;
@@ -778,34 +780,34 @@ a {
     color: white; }
 
 /* Small menu */
-/* line 81, sass/site/nav/_menus.scss */
+/* line 82, sass/site/nav/_menus.scss */
 .menu-toggle {
   display: none; }
 
 @media screen and (max-width: 600px) {
-  /* line 86, sass/site/nav/_menus.scss */
+  /* line 87, sass/site/nav/_menus.scss */
   .menu-toggle,
   .main-navigation.toggled .nav-menu {
     display: block; }
 
-  /* line 91, sass/site/nav/_menus.scss */
+  /* line 92, sass/site/nav/_menus.scss */
   .main-navigation ul {
     display: none; } }
-/* line 96, sass/site/nav/_menus.scss */
+/* line 97, sass/site/nav/_menus.scss */
 .site-main .comment-navigation,
 .site-main .paging-navigation,
 .site-main .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden; }
 
-/* line 103, sass/site/nav/_menus.scss */
+/* line 104, sass/site/nav/_menus.scss */
 .comment-navigation .nav-previous,
 .paging-navigation .nav-previous,
 .post-navigation .nav-previous {
   float: left;
   width: 50%; }
 
-/* line 110, sass/site/nav/_menus.scss */
+/* line 111, sass/site/nav/_menus.scss */
 .comment-navigation .nav-next,
 .paging-navigation .nav-next,
 .post-navigation .nav-next {
