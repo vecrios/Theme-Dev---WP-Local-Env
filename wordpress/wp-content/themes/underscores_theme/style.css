@@ -43,6 +43,7 @@ and Blueprint http://www.blueprintcss.org/
 	12.1 Captions
 	12.2 Galleries
 --------------------------------------------------------------*/
+/* For responsive design */
 /*--------------------------------------------------------------
 1.0 Reset
 --------------------------------------------------------------*/
@@ -698,6 +699,23 @@ a {
   #masthead.site-header::after {
     clear: none; }
 
+@media all and (max-width: 800px) {
+  /* line 55, sass/site/header/_masthead.scss */
+  #masthead.site-header {
+    width: 100%; }
+    /* line 58, sass/site/header/_masthead.scss */
+    #masthead.site-header .site-branding {
+      margin-right: 0px;
+      margin-bottom: 30px; }
+      /* line 62, sass/site/header/_masthead.scss */
+      #masthead.site-header .site-branding h2 {
+        width: 100%; }
+      /* line 66, sass/site/header/_masthead.scss */
+      #masthead.site-header .site-branding img {
+        display: none; }
+    /* line 72, sass/site/header/_masthead.scss */
+    #masthead.site-header::after {
+      clear: both; } }
 /*--------------------------------------------------------------
 10.5 Footer includes colophon
 --------------------------------------------------------------*/

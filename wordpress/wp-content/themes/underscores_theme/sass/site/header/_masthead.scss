@@ -48,7 +48,30 @@
 	&::after {
 		clear: none;
 	}
-
-
-
 }
+
+
+@media all and (max-width: $size__tablet-max-width) { 
+	#masthead.site-header {
+		width: 100%;
+
+		.site-branding {
+			margin-right: 0px;
+			margin-bottom: 30px;
+
+			h2 {
+				width: 100%;
+			}
+
+			img {
+				display: none;
+			}
+		}
+
+
+		&::after {
+			clear: both;
+		}
+	}
+}
+
