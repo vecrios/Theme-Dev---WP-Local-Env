@@ -1,15 +1,11 @@
 /* ------------------------------------------ */
 /* TURKI: */
-header#masthead.site-header, div#content.site-content, footer#colophon.site-footer {
-	/*border: 3px solid red;*/
+#page > * {
+	// border: 4px solid maroon;
 }
 
 #primary, #masthead > *, footer .site-info {
-	/*border: 3px solid blue;*/
-	margin-left: auto;
-	margin-right: auto;
-	/* FIX THIS; should be auto */
-	width: 50%;
+	// border: 3px solid blue;
 }
 
 .entry-title {

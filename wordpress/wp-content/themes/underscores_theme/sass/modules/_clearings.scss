@@ -21,9 +21,3 @@
 .site-footer:after {
 	@include clearfix-after;
 }
-
-
-
-.entry-content::after {
-	clear: none;
-}

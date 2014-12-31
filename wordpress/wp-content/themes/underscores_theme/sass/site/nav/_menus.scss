@@ -1,8 +1,7 @@
 .main-navigation {
 	clear: both;
-	display: inline-block;
-	float: left;
-	width: 25%;
+	display: block;
+	position: relative;
 
 	.menu {
 		float: right;
@@ -54,7 +53,6 @@
  		min-height: 64px; 
  		width: 80px; 
  		text-align: center; 
- 		border: 2px solid orange;  
 		display: table; 
 
 		&:hover > a {

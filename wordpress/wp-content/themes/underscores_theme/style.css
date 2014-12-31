@@ -501,16 +501,90 @@ a {
 .site-footer:after {
   clear: both; }
 
-/* line 27, sass/modules/_clearings.scss */
-.entry-content::after {
-  clear: none; }
-
 /*--------------------------------------------------------------
 9.0 Widgets
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
+/* line 5, sass/site/_site.scss */
+.site {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap; }
+  /* line 11, sass/site/_site.scss */
+  .site .site-header {
+    -webkit-box-ordinal-group: 0;
+    -moz-box-ordinal-group: 0;
+    -ms-flex-order: 0;
+    -webkit-order: 0;
+    order: 0;
+    -webkit-box-flex: 1 1 100%;
+    -moz-box-flex: 1 1 100%;
+    -webkit-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%; }
+  /* line 16, sass/site/_site.scss */
+  .site .main-navigation {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -ms-flex-order: 1;
+    -webkit-order: 1;
+    order: 1;
+    -webkit-box-flex: 0 1 25%;
+    -moz-box-flex: 0 1 25%;
+    -webkit-flex: 0 1 25%;
+    -ms-flex: 0 1 25%;
+    flex: 0 1 25%; }
+  /* line 21, sass/site/_site.scss */
+  .site .site-content {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+    -webkit-box-flex: 1 1;
+    -moz-box-flex: 1 1;
+    -webkit-flex: 1 1;
+    -ms-flex: 1 1;
+    flex: 1 1; }
+  /* line 26, sass/site/_site.scss */
+  .site .site-footer {
+    -webkit-box-ordinal-group: 3;
+    -moz-box-ordinal-group: 3;
+    -ms-flex-order: 3;
+    -webkit-order: 3;
+    order: 3;
+    -webkit-box-flex: 1 1 100%;
+    -moz-box-flex: 1 1 100%;
+    -webkit-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%; }
+
+/* @media all and (min-width: 600px) {
+  .aside { flex: 1 auto; }
+}
+
+@media all and (min-width: 800px) {
+  .site-content { 
+		flex: 2 0px;
+	}
+
+	.main-navigation { 
+		order: 1; 
+	}
+	.site-content { 
+		order: 2; 
+	}
+
+	.site-footer  { 
+		order: 3; 
+	}
+} */
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
@@ -544,9 +618,14 @@ a {
   margin: 0 0 1.5em; }
 
 /* line 31, sass/site/primary/_posts-and-pages.scss */
-.site-main {
-  padding-left: 4%;
-  padding-right: 4%; }
+.content-area {
+  margin-left: 0;
+  margin-right: auto;
+  width: 75%; }
+  /* line 37, sass/site/primary/_posts-and-pages.scss */
+  .content-area .site-main {
+    padding-left: 4%;
+    padding-right: 4%; }
 
 /*--------------------------------------------------------------
 10.2 Asides
@@ -603,25 +682,22 @@ a {
       max-height: 74px;
       overflow: hidden;
       border: 3px solid orange; }
-  /* line 48, sass/site/header/_masthead.scss */
-  #masthead.site-header::after {
-    clear: none; }
 
 @media all and (max-width: 600px) {
-  /* line 55, sass/site/header/_masthead.scss */
+  /* line 51, sass/site/header/_masthead.scss */
   #masthead.site-header {
     width: 100%; }
-    /* line 58, sass/site/header/_masthead.scss */
+    /* line 54, sass/site/header/_masthead.scss */
     #masthead.site-header .site-branding {
       margin-right: 0px;
       margin-bottom: 30px; }
-      /* line 62, sass/site/header/_masthead.scss */
+      /* line 58, sass/site/header/_masthead.scss */
       #masthead.site-header .site-branding h2 {
         width: 100%; }
-      /* line 66, sass/site/header/_masthead.scss */
+      /* line 62, sass/site/header/_masthead.scss */
       #masthead.site-header .site-branding img {
         display: none; }
-    /* line 72, sass/site/header/_masthead.scss */
+    /* line 68, sass/site/header/_masthead.scss */
     #masthead.site-header::after {
       clear: both; } }
 /*--------------------------------------------------------------
@@ -629,13 +705,18 @@ a {
 --------------------------------------------------------------*/
 /* line 1, sass/site/footer/_colophon.scss */
 #colophon.site-footer {
-  margin-bottom: 50px; }
-  /* line 5, sass/site/footer/_colophon.scss */
+  margin-top: 50px; }
+  /* line 4, sass/site/footer/_colophon.scss */
+  #colophon.site-footer .site-info {
+    width: 100%; }
+  /* line 8, sass/site/footer/_colophon.scss */
   #colophon.site-footer .copyright {
     display: inline-block;
     font-size: 7pt;
     color: gray;
     padding: 2%;
+    padding-right: 4%;
+    padding-left: 4%;
     text-align: right;
     width: 100%; }
 
@@ -645,18 +726,17 @@ a {
 /* line 1, sass/site/nav/_menus.scss */
 .main-navigation {
   clear: both;
-  display: inline-block;
-  float: left;
-  width: 25%; }
-  /* line 7, sass/site/nav/_menus.scss */
+  display: block;
+  position: relative; }
+  /* line 6, sass/site/nav/_menus.scss */
   .main-navigation .menu {
     float: right; }
-  /* line 11, sass/site/nav/_menus.scss */
+  /* line 10, sass/site/nav/_menus.scss */
   .main-navigation ul {
     list-style: none;
     margin: 0;
     padding-left: 0; }
-    /* line 16, sass/site/nav/_menus.scss */
+    /* line 15, sass/site/nav/_menus.scss */
     .main-navigation ul ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
@@ -664,29 +744,28 @@ a {
       top: 1.5em;
       left: -999em;
       z-index: 99999; }
-      /* line 24, sass/site/nav/_menus.scss */
+      /* line 23, sass/site/nav/_menus.scss */
       .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
-      /* line 30, sass/site/nav/_menus.scss */
+      /* line 29, sass/site/nav/_menus.scss */
       .main-navigation ul ul li:hover > ul {
         left: 100%; }
-      /* line 35, sass/site/nav/_menus.scss */
+      /* line 34, sass/site/nav/_menus.scss */
       .main-navigation ul ul a {
         width: 200px; }
-    /* line 46, sass/site/nav/_menus.scss */
+    /* line 45, sass/site/nav/_menus.scss */
     .main-navigation ul li:hover > ul {
       left: auto; }
-  /* line 50, sass/site/nav/_menus.scss */
+  /* line 49, sass/site/nav/_menus.scss */
   .main-navigation li {
     position: relative;
     float: none;
     min-height: 64px;
     width: 80px;
     text-align: center;
-    border: 2px solid orange;
     display: table; }
-  /* line 63, sass/site/nav/_menus.scss */
+  /* line 61, sass/site/nav/_menus.scss */
   .main-navigation a {
     display: block;
     text-decoration: none;
@@ -699,34 +778,34 @@ a {
     color: white; }
 
 /* Small menu */
-/* line 83, sass/site/nav/_menus.scss */
+/* line 81, sass/site/nav/_menus.scss */
 .menu-toggle {
   display: none; }
 
 @media screen and (max-width: 600px) {
-  /* line 88, sass/site/nav/_menus.scss */
+  /* line 86, sass/site/nav/_menus.scss */
   .menu-toggle,
   .main-navigation.toggled .nav-menu {
     display: block; }
 
-  /* line 93, sass/site/nav/_menus.scss */
+  /* line 91, sass/site/nav/_menus.scss */
   .main-navigation ul {
     display: none; } }
-/* line 98, sass/site/nav/_menus.scss */
+/* line 96, sass/site/nav/_menus.scss */
 .site-main .comment-navigation,
 .site-main .paging-navigation,
 .site-main .post-navigation {
   margin: 0 0 1.5em;
   overflow: hidden; }
 
-/* line 105, sass/site/nav/_menus.scss */
+/* line 103, sass/site/nav/_menus.scss */
 .comment-navigation .nav-previous,
 .paging-navigation .nav-previous,
 .post-navigation .nav-previous {
   float: left;
   width: 50%; }
 
-/* line 112, sass/site/nav/_menus.scss */
+/* line 110, sass/site/nav/_menus.scss */
 .comment-navigation .nav-next,
 .paging-navigation .nav-next,
 .post-navigation .nav-next {
@@ -842,57 +921,45 @@ DIRTYYYYYYYYYYYYY FOR QUICK MODIFICATIONS
 --------------------------------------------------------------*/
 /* ------------------------------------------ */
 /* TURKI: */
-/* line 3, sass/Misc/_dirty.scss */
-header#masthead.site-header, div#content.site-content, footer#colophon.site-footer {
-  /*border: 3px solid red;*/ }
-
-/* line 7, sass/Misc/_dirty.scss */
-#primary, #masthead > *, footer .site-info {
-  /*border: 3px solid blue;*/
-  margin-left: auto;
-  margin-right: auto;
-  /* FIX THIS; should be auto */
-  width: 50%; }
-
-/* line 15, sass/Misc/_dirty.scss */
+/* line 11, sass/Misc/_dirty.scss */
 .entry-title {
   font-size: 17pt; }
 
-/* line 19, sass/Misc/_dirty.scss */
+/* line 15, sass/Misc/_dirty.scss */
 a {
   text-decoration: none; }
 
-/* line 23, sass/Misc/_dirty.scss */
+/* line 19, sass/Misc/_dirty.scss */
 .entry-meta {
   font-size: 7pt;
   color: gray; }
 
-/* line 28, sass/Misc/_dirty.scss */
+/* line 24, sass/Misc/_dirty.scss */
 article header {
   padding-left: 3%;
   padding-right: 3%; }
 
-/* line 33, sass/Misc/_dirty.scss */
+/* line 29, sass/Misc/_dirty.scss */
 article.post > header.entry-header > * {
   text-align: center; }
 
-/* line 37, sass/Misc/_dirty.scss */
+/* line 33, sass/Misc/_dirty.scss */
 p {
   font-size: 11pt; }
 
-/* line 42, sass/Misc/_dirty.scss */
+/* line 38, sass/Misc/_dirty.scss */
 .background-1 {
   background-color: #C61459; }
 
-/* line 46, sass/Misc/_dirty.scss */
+/* line 42, sass/Misc/_dirty.scss */
 .background-2 {
   background-color: #E68117; }
 
-/* line 50, sass/Misc/_dirty.scss */
+/* line 46, sass/Misc/_dirty.scss */
 .background-3 {
   background-color: #501C9C; }
 
-/* line 54, sass/Misc/_dirty.scss */
+/* line 50, sass/Misc/_dirty.scss */
 .background-4 {
   background-color: #79D015; }
 
